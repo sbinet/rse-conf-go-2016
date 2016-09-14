@@ -9,6 +9,69 @@ binet@clermont.in2p3.fr
 
 # In this tutorial I'll show you how to install and use the Go Programming Language.
 
+* Motivations
+
+Moore's law ceased to provide the traditional single-threaded performace speedups
+
+- clock-frequency wall of ~2003
+- still deliver increases in *transistor* *density* (for now...)
+
+Multicore systems become the norm:
+
+- need to _"go_ _parallel"_ to get scalability
+
+* In a C++ world...
+
+Parallel programming in `C++` is _doable_.
+
+`C/C++` "locking+threads" (`pthreads`, `WinThreads`)
+
+- excellent performance
+- good generality
+- relatively *low* *productivity*
+
+Multi-threaded applications:
+
+- hard to get right
+- hard to *keep* right
+- hard to *keep* efficient and optimized across releases
+
+Multi-process applications:
+
+- leverage `fork+COW` on `GNU/Linux`
+
+* In a C++ world...
+
+Parallel programming in `C++` is _doable_, but *no* *panacea*.
+
+`C++11` and `C++14` admittedly helped a lot
+
+- at the price of sprinkling templates everywhere ...
+- and complicating further an already not so simple language...
+- build scalability (templates, headers system, (lack of) module system)
+- code distribution (`CPAN`, `PyPI`, ...)
+
+* Time for a new language ?
+
+ "Successful new languages build on existing languages and where
+ possible, support legacy software. C++ grew our of C. java grew out
+ of C++. To the programmer, they are all one continuous family of C
+ languages."
+ (T. Mattson)
+
+Can we have a language:
+
+- as easy as `python`
+- as fast (or nearly as fast) as `C/C++/FORTRAN`
+- with none of the deficiencies of `C++`
+- and is multicore/manycore friendly?
+
+* 
+
+.image _figs/480px-Go_gopher_mascot_bw.png
+
+yes: [[https://golang.org][Go]]
+
 * What is Go?
 
 Go is a new, general-purpose programming language.
@@ -18,9 +81,41 @@ Go is a new, general-purpose programming language.
 - Concurrent
 - Simple
 - Productive
+- Garbage collected
+- Open-source (BSD-3)
 
 "Go is a wise, clean, insightful, fresh thinking approach to the greatest-hits subset of the well understood."
 - Michael T. Jones
+
+
+* Elements of Go
+
+Founding fathers:
+
+- Russ Cox, Robert Griesemer, Ian Lance Taylor
+- Rob Pike, Ken Thompson
+
+Best of both "worlds":
+
+- Feel of a dynamic language (limited verbosity thanks to its *type* *inference* *system*)
+- Safety of a *static* *type* *system*
+
+More elements:
+
+- Object-oriented (but w/o classes)
+- Builtin *reflection*
+- First class functions with closures
+- *Duck-typing* a la `python`
+
+* Some more pointers
+
+For more interesting and well written articles/talks:
+
+Motivations for `Go`:
+.link https://talks.golang.org/2012/splash.article
+
+Concurrency in `Go`:
+.link https://talks.golang.org/2012/waza.slide
 
 
 * History
