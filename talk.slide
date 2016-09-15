@@ -989,6 +989,8 @@ For more informations: [[https://golang.org/cmd/cgo/][cmd/cgo]]
 
 * Go in Science
 
+* Go in Science
+
 Even if `Go` is relatively new, support for general purpose scientific libraries is there and growing, thanks to the [[https://github.com/gonum][gonum]] community:
 
 - [[https://github.com/gonum/blas][gonum/blas]], a `go` based implementation of Basic Linear Algebra Subprograms
