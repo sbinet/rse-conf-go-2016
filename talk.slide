@@ -985,6 +985,67 @@ And build/install like so:
 
 For more informations: [[https://golang.org/cmd/cgo/][cmd/cgo]]
 
+(and with `Go-1.7`, `cgo` also works seamlessly for `Fortran` `2003` libraries exporting `ISO-C` bindings.)
+
+* Go in Science
+
+Even if `Go` is relatively new, support for general purpose scientific libraries is there and growing, thanks to the [[https://github.com/gonum][gonum]] community:
+
+- [[https://github.com/gonum/blas][gonum/blas]], a `go` based implementation of Basic Linear Algebra Subprograms
+- [[https://github.com/gonum/matrix][gonum/matrix]], to work with matrices
+- [[https://github.com/gonum/graph][gonum/graph]], to work with graphs
+- [[https://github.com/gonum/optimize][gonum/optimize]], for finding the optimum value of functions
+- [[https://github.com/gonum/integrate][gonum/integrate]], provides routines for numerical integration
+- [[https://github.com/gonum/stat][gonum/stat]], for statistics and distributions
+- ...
+
+
+Plotting data is also rather easy:
+
+- [[http://github.com/gonum/plot][gonum/plot]] (most of the plots seen here were made w/ `gonum/plot`)
+- [[https://github.com/sbinet/go-gnuplot][go-gnuplot]]
+
+
+* Go in Data Science
+
+- [[https://github.com/gopherds][gopherds]]: data science hub for Go
+- [[https://github.com/gopherds/gophernotes][gophernotes]]: a Go "kernel" for [[https://jupyter.org][Jupyter]]
+- [[https://github.com/gopherds/mybinder-go][mybinder-go]]: a web-based Go "kernel" for [[https://jupyter.org][Jupyter]] using [[http://mybinder.org][mybinder.org]]
+- [[https://github.com/tensorflow/tensorflow/blob/0e5d49d362a5ef72179e385d1f71ec29ab0392f6/tensorflow/go/tensor.go][Go bindings to TensorFlow]]
+
+* What's missing ?
+
+The `Go` scientific-oriented ecosystem is slowly bootstrapping itself.
+Other "communities" are gathering too:
+
+- Biology: [[https://github.com/biogo/biogo][biogo]]
+- Chemistry: [[http://gochem.org/][gochem]]
+- High Energy Physics: [[https://go-hep.github.io][go-hep]]
+- Astro-particles: [[https://github.com/astrogo][astrogo]]
+
+So, what's missing ? (IMHO) not that much.
+
+- a dash of performance (but we are still light years ahead of `CPython`)
+- critical mass
+
+the rest is/will-be history :)
+
+* What's missing ? - II
+
+- A (native) GUI toolkit?
+Bindings to `Qt`, `GTK`, etc... exist but they break the nice "go-get" install experience.
+
+A (native) GUI toolkit is being built: [[https://godoc.org/golang.org/x/exp/shiny/screen][golang.org/x/exp/shiny]]
+
+Right now, workaround is to create a `Go` web server and serve `JavaScript+HTML`.
+
+
+Nice to have to help spreading [[https://golang.org][Go]]:
+
+- a robust way to write _e.g._ `Python` extension modules in `Go` (see [[https://github.com/go-python/gopy][go-python/gopy]])
+- a `go` interpreter ? (see [[https://github.com/sbinet/igo][igo]], [[https://github.com/go-interpreter][go-interpreter]] and/or [[https://github.com/gophergala2016/gophernotes][Jupyter+Go]])
+
+
 * Acknowledgements / resources
 
 Most of this tutorial has been extracted or adapted from:
@@ -995,6 +1056,11 @@ Most of this tutorial has been extracted or adapted from:
 
 .link http://tour.golang.org
 
+* Thank you
+Sébastien Binet
+CNRS/IN2P3/LPC
+[[mailto:binet@clermont.in2p3.fr][binet@clermont.in2p3.fr]]
+[[https://twitter.com/0xb1ns][@0xb1ns]]
 
 * Extra
 
